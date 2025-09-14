@@ -1,0 +1,16 @@
+{
+  "compatibility_date": "2025-04-01",
+  "main": "src/index.ts",
+  "name": "ethnikk-v2",
+  "upload_source_maps": true,
+  "observability": {
+    "enabled": true
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "ethnikkV2",
+      "database_id": "40991903-6fca-41fb-b530-3341da771f97"
+    }
+  ]
+}
