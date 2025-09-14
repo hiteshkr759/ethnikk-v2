@@ -6,6 +6,7 @@ export class ItemList extends D1ListEndpoint<HandleArgs> {
   _meta = {
     model: ItemModel,
   };
-  searchFields = ["name", "product_code"];
+
+  searchFields = ["name", "slug", "description"];
   defaultOrderBy = "id DESC";
 }

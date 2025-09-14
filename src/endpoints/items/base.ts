@@ -1,6 +1,7 @@
 import { z } from "zod";
 
 export const item = z.object({
+    id: z.number().int().optional(),
     name: z.string(),
     product_code: z.string(),
     color: z.string().optional(),

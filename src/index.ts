@@ -37,13 +37,13 @@ const openapi = fromHono(app, {
       title: "My Awesome API",
       version: "2.0.0",
       description: "This is the documentation for my awesome API.",
-    },
+    }
   },
 });
 
 // Register Tasks Sub router
-openapi.route("/tasks", tasksRouter);
 openapi.route("/items", itemsRouter);
+// openapi.route("/tasks", tasksRouter);
 
 // Register other endpoints
 openapi.post("/dummy/:slug", DummyEndpoint);

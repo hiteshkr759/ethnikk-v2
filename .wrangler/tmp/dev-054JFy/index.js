@@ -11243,8 +11243,7 @@ var ItemModel = {
       ...obj
     };
   }, "serializer"),
-  serializerObject: item,
-  tags: ["sxfg"]
+  serializerObject: item
 };
 
 // src/endpoints/items/itemCreate.ts
@@ -11254,14 +11253,8 @@ var ItemCreate = class extends D1CreateEndpoint {
   }
   _meta = {
     model: ItemModel,
-    docs: {
-      tags: ["Items"],
-      summary: "Create a new item",
-      description: "Adds a new item to the catalog"
-    },
     fields: ItemModel.schema.pick({
       // this is purposely missing the id, because users shouldn't be able to define it
-      id: true,
       name: true,
       product_code: true,
       color: true,
@@ -11408,7 +11401,7 @@ var jsonError = /* @__PURE__ */ __name(async (request, env, _ctx, middlewareCtx)
 }, "jsonError");
 var middleware_miniflare3_json_error_default = jsonError;
 
-// .wrangler/tmp/bundle-Y39u9g/middleware-insertion-facade.js
+// .wrangler/tmp/bundle-nUmoiZ/middleware-insertion-facade.js
 var __INTERNAL_WRANGLER_MIDDLEWARE__ = [
   middleware_ensure_req_body_drained_default,
   middleware_miniflare3_json_error_default
@@ -11440,7 +11433,7 @@ function __facade_invoke__(request, env, ctx, dispatch, finalMiddleware) {
 }
 __name(__facade_invoke__, "__facade_invoke__");
 
-// .wrangler/tmp/bundle-Y39u9g/middleware-loader.entry.ts
+// .wrangler/tmp/bundle-nUmoiZ/middleware-loader.entry.ts
 var __Facade_ScheduledController__ = class ___Facade_ScheduledController__ {
   constructor(scheduledTime, cron, noRetry) {
     this.scheduledTime = scheduledTime;
@@ -11546,3 +11539,4 @@ js-yaml/dist/js-yaml.mjs:
   (*! js-yaml 4.1.0 https://github.com/nodeca/js-yaml @license MIT *)
 */
 //# sourceMappingURL=index.js.map
+                                                                                                                                                                    

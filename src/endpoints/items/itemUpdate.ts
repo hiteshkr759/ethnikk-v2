@@ -1,8 +1,8 @@
-import { D1CreateEndpoint } from "chanfana";
+import { D1UpdateEndpoint } from "chanfana";
 import { HandleArgs } from "../../types";
 import { ItemModel } from "./base";
 
-export class ItemCreate extends D1CreateEndpoint<HandleArgs> {
+export class ItemUpdate extends D1UpdateEndpoint<HandleArgs> {
   _meta = {
     model: ItemModel,
     fields: ItemModel.schema.pick({
@@ -15,6 +15,6 @@ export class ItemCreate extends D1CreateEndpoint<HandleArgs> {
         stock: true,
         cp: true,
         sp: true,
-    })
+    }),
   };
 }
