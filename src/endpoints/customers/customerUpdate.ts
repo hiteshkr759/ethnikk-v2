@@ -14,7 +14,7 @@ export class CustomerUpdate extends D1UpdateEndpoint<HandleArgs> {
           points_earned : true,
           created_at : true,
           updated_at : true,
-          modified_by : 
+          modified_by : true
     }),
   };
 }
