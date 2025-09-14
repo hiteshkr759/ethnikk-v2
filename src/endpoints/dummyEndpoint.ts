@@ -14,6 +14,7 @@ export class DummyEndpoint extends OpenAPIRoute {
       body: contentJson(
         z.object({
           name: z.string(),
+          
         }),
       ),
     },

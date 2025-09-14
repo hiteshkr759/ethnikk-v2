@@ -1,0 +1,25 @@
+import { Hono } from "hono";
+import { fromHono } from "chanfana";
+import { CustomerList } from "./customerList";
+import { CustomerCreate } from "./customerCreate";
+import { CustomerRead } from "./customerRead";
+import { CustomerUpdate } from "./customerUpdate";
+import { CustomerDelete } from "./customerDelete";
+// import { ItemCreate } from "./itemCreate";
+// import { ItemList } from "./itemList";
+// import { ItemRead } from "./itemRead";
+// import { ItemUpdate } from "./itemUpdate";
+// import { ItemDelete } from "./itemDelete";
+// import { tasksRouter } from "../tasks/router";
+// import { TaskList } from "./taskList";
+// import { TaskCreate } from "./taskCreate";
+// import { TaskRead } from "./taskRead";
+// import { TaskUpdate } from "./taskUpdate";
+// import { TaskDelete } from "./taskDelete";
+
+export const customersRouter = fromHono(new Hono());
+customersRouter.get("/", CustomerList);
+customersRouter.post("/", CustomerCreate);          
+customersRouter.get("/:id", CustomerRead);
+customersRouter.put("/:id", CustomerUpdate);
+customersRouter.delete("/:id", CustomerDelete);
